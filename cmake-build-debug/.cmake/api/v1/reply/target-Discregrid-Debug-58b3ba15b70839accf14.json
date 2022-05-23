@@ -1,0 +1,349 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "bin/libDiscregrid_d.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"install",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"discregrid/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 125,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 136,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 94,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk"
+				},
+				{
+					"fragment" : "-std=gnu++11"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/Users/xayah/Desktop/Temp/Discregrid/discregrid/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/xayah/Desktop/Temp/Discregrid/discregrid/include/Discregrid"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/opt/homebrew/include/eigen3"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/xayah/Desktop/Temp/Discregrid/discregrid/../extern"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				2,
+				3,
+				8,
+				13,
+				14,
+				15,
+				18,
+				19,
+				24
+			]
+		}
+	],
+	"id" : "Discregrid::@1ccdefab15027509105d",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"name" : "Discregrid",
+	"nameOnDisk" : "libDiscregrid_d.a",
+	"paths" : 
+	{
+		"build" : "discregrid",
+		"source" : "discregrid"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				2,
+				3
+			]
+		},
+		{
+			"name" : "Header Files Acceleration",
+			"sourceIndexes" : 
+			[
+				4,
+				5,
+				6,
+				7
+			]
+		},
+		{
+			"name" : "Source Files Acceleration",
+			"sourceIndexes" : 
+			[
+				8
+			]
+		},
+		{
+			"name" : "Header Files Mesh",
+			"sourceIndexes" : 
+			[
+				9,
+				10,
+				11,
+				12
+			]
+		},
+		{
+			"name" : "Source Files Mesh",
+			"sourceIndexes" : 
+			[
+				13,
+				14,
+				15
+			]
+		},
+		{
+			"name" : "Header Files Geometry",
+			"sourceIndexes" : 
+			[
+				16,
+				17
+			]
+		},
+		{
+			"name" : "Source Files Geometry",
+			"sourceIndexes" : 
+			[
+				18,
+				19
+			]
+		},
+		{
+			"name" : "Header Files Utility",
+			"sourceIndexes" : 
+			[
+				20,
+				21,
+				22,
+				23
+			]
+		},
+		{
+			"name" : "Source Files Utility",
+			"sourceIndexes" : 
+			[
+				24
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/discrete_grid.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/cubic_lagrange_discrete_grid.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "discregrid/src/discrete_grid.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "discregrid/src/cubic_lagrange_discrete_grid.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/acceleration/bounding_sphere_hierarchy.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/acceleration/bounding_sphere.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/acceleration/kd_tree.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/acceleration/kd_tree.inl",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "discregrid/src/acceleration/bounding_sphere_hierarchy.cpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/mesh/triangle_mesh.hpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/mesh/entity_containers.hpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/mesh/entity_iterators.hpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/mesh/halfedge.hpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "discregrid/src/mesh/entity_containers.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "discregrid/src/mesh/entity_iterators.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "discregrid/src/mesh/triangle_mesh.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/geometry/mesh_distance.hpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/src/geometry/point_triangle_distance.hpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "discregrid/src/geometry/mesh_distance.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "discregrid/src/geometry/point_triangle_distance.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/utility/serialize.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/include/Discregrid/utility/lru_cache.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/src/utility/timing.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "discregrid/src/utility/spinlock.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "discregrid/src/utility/timing.cpp",
+			"sourceGroupIndex" : 9
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

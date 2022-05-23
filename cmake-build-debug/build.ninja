@@ -1,0 +1,790 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: Discregrid
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug && /opt/homebrew/Cellar/cmake/3.23.1/bin/ccmake -S/Users/xayah/Desktop/Temp/Discregrid -B/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake --regenerate-during-build -S/Users/xayah/Desktop/Temp/Discregrid -B/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/xayah/Desktop/Temp/Discregrid/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target Discregrid
+
+
+#############################################
+# Order-only phony target for Discregrid
+
+build cmake_object_order_depends_target_Discregrid: phony || discregrid/CMakeFiles/Discregrid.dir
+
+build discregrid/CMakeFiles/Discregrid.dir/src/discrete_grid.cpp.o: CXX_COMPILER__Discregrid_Debug /Users/xayah/Desktop/Temp/Discregrid/discregrid/src/discrete_grid.cpp || cmake_object_order_depends_target_Discregrid
+  DEP_FILE = discregrid/CMakeFiles/Discregrid.dir/src/discrete_grid.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include/Discregrid -I/opt/homebrew/include/eigen3 -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/../extern
+  OBJECT_DIR = discregrid/CMakeFiles/Discregrid.dir
+  OBJECT_FILE_DIR = discregrid/CMakeFiles/Discregrid.dir/src
+  TARGET_COMPILE_PDB = discregrid/CMakeFiles/Discregrid.dir/Discregrid.pdb
+  TARGET_PDB = bin/libDiscregrid_d.pdb
+
+build discregrid/CMakeFiles/Discregrid.dir/src/cubic_lagrange_discrete_grid.cpp.o: CXX_COMPILER__Discregrid_Debug /Users/xayah/Desktop/Temp/Discregrid/discregrid/src/cubic_lagrange_discrete_grid.cpp || cmake_object_order_depends_target_Discregrid
+  DEP_FILE = discregrid/CMakeFiles/Discregrid.dir/src/cubic_lagrange_discrete_grid.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include/Discregrid -I/opt/homebrew/include/eigen3 -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/../extern
+  OBJECT_DIR = discregrid/CMakeFiles/Discregrid.dir
+  OBJECT_FILE_DIR = discregrid/CMakeFiles/Discregrid.dir/src
+  TARGET_COMPILE_PDB = discregrid/CMakeFiles/Discregrid.dir/Discregrid.pdb
+  TARGET_PDB = bin/libDiscregrid_d.pdb
+
+build discregrid/CMakeFiles/Discregrid.dir/src/acceleration/bounding_sphere_hierarchy.cpp.o: CXX_COMPILER__Discregrid_Debug /Users/xayah/Desktop/Temp/Discregrid/discregrid/src/acceleration/bounding_sphere_hierarchy.cpp || cmake_object_order_depends_target_Discregrid
+  DEP_FILE = discregrid/CMakeFiles/Discregrid.dir/src/acceleration/bounding_sphere_hierarchy.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include/Discregrid -I/opt/homebrew/include/eigen3 -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/../extern
+  OBJECT_DIR = discregrid/CMakeFiles/Discregrid.dir
+  OBJECT_FILE_DIR = discregrid/CMakeFiles/Discregrid.dir/src/acceleration
+  TARGET_COMPILE_PDB = discregrid/CMakeFiles/Discregrid.dir/Discregrid.pdb
+  TARGET_PDB = bin/libDiscregrid_d.pdb
+
+build discregrid/CMakeFiles/Discregrid.dir/src/mesh/entity_containers.cpp.o: CXX_COMPILER__Discregrid_Debug /Users/xayah/Desktop/Temp/Discregrid/discregrid/src/mesh/entity_containers.cpp || cmake_object_order_depends_target_Discregrid
+  DEP_FILE = discregrid/CMakeFiles/Discregrid.dir/src/mesh/entity_containers.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include/Discregrid -I/opt/homebrew/include/eigen3 -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/../extern
+  OBJECT_DIR = discregrid/CMakeFiles/Discregrid.dir
+  OBJECT_FILE_DIR = discregrid/CMakeFiles/Discregrid.dir/src/mesh
+  TARGET_COMPILE_PDB = discregrid/CMakeFiles/Discregrid.dir/Discregrid.pdb
+  TARGET_PDB = bin/libDiscregrid_d.pdb
+
+build discregrid/CMakeFiles/Discregrid.dir/src/mesh/entity_iterators.cpp.o: CXX_COMPILER__Discregrid_Debug /Users/xayah/Desktop/Temp/Discregrid/discregrid/src/mesh/entity_iterators.cpp || cmake_object_order_depends_target_Discregrid
+  DEP_FILE = discregrid/CMakeFiles/Discregrid.dir/src/mesh/entity_iterators.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include/Discregrid -I/opt/homebrew/include/eigen3 -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/../extern
+  OBJECT_DIR = discregrid/CMakeFiles/Discregrid.dir
+  OBJECT_FILE_DIR = discregrid/CMakeFiles/Discregrid.dir/src/mesh
+  TARGET_COMPILE_PDB = discregrid/CMakeFiles/Discregrid.dir/Discregrid.pdb
+  TARGET_PDB = bin/libDiscregrid_d.pdb
+
+build discregrid/CMakeFiles/Discregrid.dir/src/mesh/triangle_mesh.cpp.o: CXX_COMPILER__Discregrid_Debug /Users/xayah/Desktop/Temp/Discregrid/discregrid/src/mesh/triangle_mesh.cpp || cmake_object_order_depends_target_Discregrid
+  DEP_FILE = discregrid/CMakeFiles/Discregrid.dir/src/mesh/triangle_mesh.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include/Discregrid -I/opt/homebrew/include/eigen3 -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/../extern
+  OBJECT_DIR = discregrid/CMakeFiles/Discregrid.dir
+  OBJECT_FILE_DIR = discregrid/CMakeFiles/Discregrid.dir/src/mesh
+  TARGET_COMPILE_PDB = discregrid/CMakeFiles/Discregrid.dir/Discregrid.pdb
+  TARGET_PDB = bin/libDiscregrid_d.pdb
+
+build discregrid/CMakeFiles/Discregrid.dir/src/geometry/mesh_distance.cpp.o: CXX_COMPILER__Discregrid_Debug /Users/xayah/Desktop/Temp/Discregrid/discregrid/src/geometry/mesh_distance.cpp || cmake_object_order_depends_target_Discregrid
+  DEP_FILE = discregrid/CMakeFiles/Discregrid.dir/src/geometry/mesh_distance.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include/Discregrid -I/opt/homebrew/include/eigen3 -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/../extern
+  OBJECT_DIR = discregrid/CMakeFiles/Discregrid.dir
+  OBJECT_FILE_DIR = discregrid/CMakeFiles/Discregrid.dir/src/geometry
+  TARGET_COMPILE_PDB = discregrid/CMakeFiles/Discregrid.dir/Discregrid.pdb
+  TARGET_PDB = bin/libDiscregrid_d.pdb
+
+build discregrid/CMakeFiles/Discregrid.dir/src/geometry/point_triangle_distance.cpp.o: CXX_COMPILER__Discregrid_Debug /Users/xayah/Desktop/Temp/Discregrid/discregrid/src/geometry/point_triangle_distance.cpp || cmake_object_order_depends_target_Discregrid
+  DEP_FILE = discregrid/CMakeFiles/Discregrid.dir/src/geometry/point_triangle_distance.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include/Discregrid -I/opt/homebrew/include/eigen3 -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/../extern
+  OBJECT_DIR = discregrid/CMakeFiles/Discregrid.dir
+  OBJECT_FILE_DIR = discregrid/CMakeFiles/Discregrid.dir/src/geometry
+  TARGET_COMPILE_PDB = discregrid/CMakeFiles/Discregrid.dir/Discregrid.pdb
+  TARGET_PDB = bin/libDiscregrid_d.pdb
+
+build discregrid/CMakeFiles/Discregrid.dir/src/utility/timing.cpp.o: CXX_COMPILER__Discregrid_Debug /Users/xayah/Desktop/Temp/Discregrid/discregrid/src/utility/timing.cpp || cmake_object_order_depends_target_Discregrid
+  DEP_FILE = discregrid/CMakeFiles/Discregrid.dir/src/utility/timing.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/include/Discregrid -I/opt/homebrew/include/eigen3 -I/Users/xayah/Desktop/Temp/Discregrid/discregrid/../extern
+  OBJECT_DIR = discregrid/CMakeFiles/Discregrid.dir
+  OBJECT_FILE_DIR = discregrid/CMakeFiles/Discregrid.dir/src/utility
+  TARGET_COMPILE_PDB = discregrid/CMakeFiles/Discregrid.dir/Discregrid.pdb
+  TARGET_PDB = bin/libDiscregrid_d.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target Discregrid
+
+
+#############################################
+# Link the static library bin/libDiscregrid_d.a
+
+build bin/libDiscregrid_d.a: CXX_STATIC_LIBRARY_LINKER__Discregrid_Debug discregrid/CMakeFiles/Discregrid.dir/src/discrete_grid.cpp.o discregrid/CMakeFiles/Discregrid.dir/src/cubic_lagrange_discrete_grid.cpp.o discregrid/CMakeFiles/Discregrid.dir/src/acceleration/bounding_sphere_hierarchy.cpp.o discregrid/CMakeFiles/Discregrid.dir/src/mesh/entity_containers.cpp.o discregrid/CMakeFiles/Discregrid.dir/src/mesh/entity_iterators.cpp.o discregrid/CMakeFiles/Discregrid.dir/src/mesh/triangle_mesh.cpp.o discregrid/CMakeFiles/Discregrid.dir/src/geometry/mesh_distance.cpp.o discregrid/CMakeFiles/Discregrid.dir/src/geometry/point_triangle_distance.cpp.o discregrid/CMakeFiles/Discregrid.dir/src/utility/timing.cpp.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LANGUAGE_COMPILE_FLAGS = -Xclang -fopenmp -g
+  OBJECT_DIR = discregrid/CMakeFiles/Discregrid.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = discregrid/CMakeFiles/Discregrid.dir/Discregrid.pdb
+  TARGET_FILE = bin/libDiscregrid_d.a
+  TARGET_PDB = bin/libDiscregrid_d.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build discregrid/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/discregrid && /opt/homebrew/Cellar/cmake/3.23.1/bin/ccmake -S/Users/xayah/Desktop/Temp/Discregrid -B/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build discregrid/edit_cache: phony discregrid/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build discregrid/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/discregrid && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake --regenerate-during-build -S/Users/xayah/Desktop/Temp/Discregrid -B/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build discregrid/rebuild_cache: phony discregrid/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build discregrid/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build discregrid/CMakeFiles/install.util: CUSTOM_COMMAND discregrid/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/discregrid && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build discregrid/install: phony discregrid/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build discregrid/CMakeFiles/install/local.util: CUSTOM_COMMAND discregrid/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/discregrid && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build discregrid/install/local: phony discregrid/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build discregrid/CMakeFiles/install/strip.util: CUSTOM_COMMAND discregrid/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/discregrid && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build discregrid/install/strip: phony discregrid/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/xayah/Desktop/Temp/Discregrid/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build cmd/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd && /opt/homebrew/Cellar/cmake/3.23.1/bin/ccmake -S/Users/xayah/Desktop/Temp/Discregrid -B/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build cmd/edit_cache: phony cmd/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cmd/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake --regenerate-during-build -S/Users/xayah/Desktop/Temp/Discregrid -B/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build cmd/rebuild_cache: phony cmd/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build cmd/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build cmd/CMakeFiles/install.util: CUSTOM_COMMAND cmd/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build cmd/install: phony cmd/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build cmd/CMakeFiles/install/local.util: CUSTOM_COMMAND cmd/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build cmd/install/local: phony cmd/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build cmd/CMakeFiles/install/strip.util: CUSTOM_COMMAND cmd/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build cmd/install/strip: phony cmd/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/xayah/Desktop/Temp/Discregrid/cmd/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target GenerateSDF
+
+
+#############################################
+# Order-only phony target for GenerateSDF
+
+build cmake_object_order_depends_target_GenerateSDF: phony || cmake_object_order_depends_target_Discregrid
+
+build cmd/generate_sdf/CMakeFiles/GenerateSDF.dir/main.cpp.o: CXX_COMPILER__GenerateSDF_Debug /Users/xayah/Desktop/Temp/Discregrid/cmd/generate_sdf/main.cpp || cmake_object_order_depends_target_GenerateSDF
+  DEP_FILE = cmd/generate_sdf/CMakeFiles/GenerateSDF.dir/main.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/cmd/generate_sdf/../../extern -I/Users/xayah/Desktop/Temp/Discregrid/cmd/generate_sdf/../../discregrid/include -I/opt/homebrew/include/eigen3
+  OBJECT_DIR = cmd/generate_sdf/CMakeFiles/GenerateSDF.dir
+  OBJECT_FILE_DIR = cmd/generate_sdf/CMakeFiles/GenerateSDF.dir
+  TARGET_COMPILE_PDB = cmd/generate_sdf/CMakeFiles/GenerateSDF.dir/
+  TARGET_PDB = bin/GenerateSDF.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target GenerateSDF
+
+
+#############################################
+# Link the executable bin/GenerateSDF
+
+build bin/GenerateSDF: CXX_EXECUTABLE_LINKER__GenerateSDF_Debug cmd/generate_sdf/CMakeFiles/GenerateSDF.dir/main.cpp.o | bin/libDiscregrid_d.a || bin/libDiscregrid_d.a
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LINK_LIBRARIES = bin/libDiscregrid_d.a
+  OBJECT_DIR = cmd/generate_sdf/CMakeFiles/GenerateSDF.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = cmd/generate_sdf/CMakeFiles/GenerateSDF.dir/
+  TARGET_FILE = bin/GenerateSDF
+  TARGET_PDB = bin/GenerateSDF.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build cmd/generate_sdf/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/generate_sdf && /opt/homebrew/Cellar/cmake/3.23.1/bin/ccmake -S/Users/xayah/Desktop/Temp/Discregrid -B/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build cmd/generate_sdf/edit_cache: phony cmd/generate_sdf/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cmd/generate_sdf/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/generate_sdf && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake --regenerate-during-build -S/Users/xayah/Desktop/Temp/Discregrid -B/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build cmd/generate_sdf/rebuild_cache: phony cmd/generate_sdf/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build cmd/generate_sdf/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build cmd/generate_sdf/CMakeFiles/install.util: CUSTOM_COMMAND cmd/generate_sdf/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/generate_sdf && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build cmd/generate_sdf/install: phony cmd/generate_sdf/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build cmd/generate_sdf/CMakeFiles/install/local.util: CUSTOM_COMMAND cmd/generate_sdf/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/generate_sdf && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build cmd/generate_sdf/install/local: phony cmd/generate_sdf/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build cmd/generate_sdf/CMakeFiles/install/strip.util: CUSTOM_COMMAND cmd/generate_sdf/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/generate_sdf && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build cmd/generate_sdf/install/strip: phony cmd/generate_sdf/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/xayah/Desktop/Temp/Discregrid/cmd/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target DiscreteFieldToBitmap
+
+
+#############################################
+# Order-only phony target for DiscreteFieldToBitmap
+
+build cmake_object_order_depends_target_DiscreteFieldToBitmap: phony || cmake_object_order_depends_target_Discregrid
+
+build cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir/main.cpp.o: CXX_COMPILER__DiscreteFieldToBitmap_Debug /Users/xayah/Desktop/Temp/Discregrid/cmd/discrete_field_to_bitmap/main.cpp || cmake_object_order_depends_target_DiscreteFieldToBitmap
+  DEP_FILE = cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir/main.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/cmd/discrete_field_to_bitmap/../../extern -I/Users/xayah/Desktop/Temp/Discregrid/cmd/discrete_field_to_bitmap/../../discregrid/include -I/opt/homebrew/include/eigen3
+  OBJECT_DIR = cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir
+  OBJECT_FILE_DIR = cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir
+  TARGET_COMPILE_PDB = cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir/
+  TARGET_PDB = bin/DiscreteFieldToBitmap.pdb
+
+build cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir/bmp_file.cpp.o: CXX_COMPILER__DiscreteFieldToBitmap_Debug /Users/xayah/Desktop/Temp/Discregrid/cmd/discrete_field_to_bitmap/bmp_file.cpp || cmake_object_order_depends_target_DiscreteFieldToBitmap
+  DEP_FILE = cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir/bmp_file.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/cmd/discrete_field_to_bitmap/../../extern -I/Users/xayah/Desktop/Temp/Discregrid/cmd/discrete_field_to_bitmap/../../discregrid/include -I/opt/homebrew/include/eigen3
+  OBJECT_DIR = cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir
+  OBJECT_FILE_DIR = cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir
+  TARGET_COMPILE_PDB = cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir/
+  TARGET_PDB = bin/DiscreteFieldToBitmap.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target DiscreteFieldToBitmap
+
+
+#############################################
+# Link the executable bin/DiscreteFieldToBitmap
+
+build bin/DiscreteFieldToBitmap: CXX_EXECUTABLE_LINKER__DiscreteFieldToBitmap_Debug cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir/main.cpp.o cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir/bmp_file.cpp.o | bin/libDiscregrid_d.a || bin/libDiscregrid_d.a
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LINK_LIBRARIES = bin/libDiscregrid_d.a
+  OBJECT_DIR = cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = cmd/discrete_field_to_bitmap/CMakeFiles/DiscreteFieldToBitmap.dir/
+  TARGET_FILE = bin/DiscreteFieldToBitmap
+  TARGET_PDB = bin/DiscreteFieldToBitmap.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build cmd/discrete_field_to_bitmap/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/discrete_field_to_bitmap && /opt/homebrew/Cellar/cmake/3.23.1/bin/ccmake -S/Users/xayah/Desktop/Temp/Discregrid -B/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build cmd/discrete_field_to_bitmap/edit_cache: phony cmd/discrete_field_to_bitmap/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cmd/discrete_field_to_bitmap/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/discrete_field_to_bitmap && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake --regenerate-during-build -S/Users/xayah/Desktop/Temp/Discregrid -B/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build cmd/discrete_field_to_bitmap/rebuild_cache: phony cmd/discrete_field_to_bitmap/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build cmd/discrete_field_to_bitmap/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build cmd/discrete_field_to_bitmap/CMakeFiles/install.util: CUSTOM_COMMAND cmd/discrete_field_to_bitmap/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/discrete_field_to_bitmap && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build cmd/discrete_field_to_bitmap/install: phony cmd/discrete_field_to_bitmap/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build cmd/discrete_field_to_bitmap/CMakeFiles/install/local.util: CUSTOM_COMMAND cmd/discrete_field_to_bitmap/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/discrete_field_to_bitmap && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build cmd/discrete_field_to_bitmap/install/local: phony cmd/discrete_field_to_bitmap/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build cmd/discrete_field_to_bitmap/CMakeFiles/install/strip.util: CUSTOM_COMMAND cmd/discrete_field_to_bitmap/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/discrete_field_to_bitmap && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build cmd/discrete_field_to_bitmap/install/strip: phony cmd/discrete_field_to_bitmap/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/xayah/Desktop/Temp/Discregrid/cmd/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target GenerateDensityMap
+
+
+#############################################
+# Order-only phony target for GenerateDensityMap
+
+build cmake_object_order_depends_target_GenerateDensityMap: phony || cmake_object_order_depends_target_Discregrid
+
+build cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir/main.cpp.o: CXX_COMPILER__GenerateDensityMap_Debug /Users/xayah/Desktop/Temp/Discregrid/cmd/generate_density_map/main.cpp || cmake_object_order_depends_target_GenerateDensityMap
+  DEP_FILE = cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir/main.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/cmd/generate_density_map/../../extern -I/Users/xayah/Desktop/Temp/Discregrid/cmd/generate_density_map/../../discregrid/include -I/opt/homebrew/include/eigen3
+  OBJECT_DIR = cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir
+  OBJECT_FILE_DIR = cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir
+  TARGET_COMPILE_PDB = cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir/
+  TARGET_PDB = bin/GenerateDensityMap.pdb
+
+build cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir/gauss_quadrature.cpp.o: CXX_COMPILER__GenerateDensityMap_Debug /Users/xayah/Desktop/Temp/Discregrid/cmd/generate_density_map/gauss_quadrature.cpp || cmake_object_order_depends_target_GenerateDensityMap
+  DEP_FILE = cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir/gauss_quadrature.cpp.o.d
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/xayah/Desktop/Temp/Discregrid/cmd/generate_density_map/../../extern -I/Users/xayah/Desktop/Temp/Discregrid/cmd/generate_density_map/../../discregrid/include -I/opt/homebrew/include/eigen3
+  OBJECT_DIR = cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir
+  OBJECT_FILE_DIR = cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir
+  TARGET_COMPILE_PDB = cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir/
+  TARGET_PDB = bin/GenerateDensityMap.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target GenerateDensityMap
+
+
+#############################################
+# Link the executable bin/GenerateDensityMap
+
+build bin/GenerateDensityMap: CXX_EXECUTABLE_LINKER__GenerateDensityMap_Debug cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir/main.cpp.o cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir/gauss_quadrature.cpp.o | bin/libDiscregrid_d.a || bin/libDiscregrid_d.a
+  FLAGS = -Xclang -fopenmp -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LINK_LIBRARIES = bin/libDiscregrid_d.a
+  OBJECT_DIR = cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = cmd/generate_density_map/CMakeFiles/GenerateDensityMap.dir/
+  TARGET_FILE = bin/GenerateDensityMap
+  TARGET_PDB = bin/GenerateDensityMap.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build cmd/generate_density_map/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/generate_density_map && /opt/homebrew/Cellar/cmake/3.23.1/bin/ccmake -S/Users/xayah/Desktop/Temp/Discregrid -B/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build cmd/generate_density_map/edit_cache: phony cmd/generate_density_map/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cmd/generate_density_map/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/generate_density_map && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake --regenerate-during-build -S/Users/xayah/Desktop/Temp/Discregrid -B/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build cmd/generate_density_map/rebuild_cache: phony cmd/generate_density_map/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build cmd/generate_density_map/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build cmd/generate_density_map/CMakeFiles/install.util: CUSTOM_COMMAND cmd/generate_density_map/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/generate_density_map && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build cmd/generate_density_map/install: phony cmd/generate_density_map/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build cmd/generate_density_map/CMakeFiles/install/local.util: CUSTOM_COMMAND cmd/generate_density_map/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/generate_density_map && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build cmd/generate_density_map/install/local: phony cmd/generate_density_map/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build cmd/generate_density_map/CMakeFiles/install/strip.util: CUSTOM_COMMAND cmd/generate_density_map/all
+  COMMAND = cd /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/generate_density_map && /opt/homebrew/Cellar/cmake/3.23.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build cmd/generate_density_map/install/strip: phony cmd/generate_density_map/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Target aliases.
+
+build Discregrid: phony bin/libDiscregrid_d.a
+
+build DiscreteFieldToBitmap: phony bin/DiscreteFieldToBitmap
+
+build GenerateDensityMap: phony bin/GenerateDensityMap
+
+build GenerateSDF: phony bin/GenerateSDF
+
+build libDiscregrid_d.a: phony bin/libDiscregrid_d.a
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug
+
+build all: phony discregrid/all cmd/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd
+
+build cmd/all: phony cmd/generate_sdf/all cmd/discrete_field_to_bitmap/all cmd/generate_density_map/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/discrete_field_to_bitmap
+
+build cmd/discrete_field_to_bitmap/all: phony bin/DiscreteFieldToBitmap
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/generate_density_map
+
+build cmd/generate_density_map/all: phony bin/GenerateDensityMap
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/cmd/generate_sdf
+
+build cmd/generate_sdf/all: phony bin/GenerateSDF
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug/discregrid
+
+build discregrid/all: phony bin/libDiscregrid_d.a
+
+# =============================================================================
+# Unknown Build Time Dependencies.
+# Tell Ninja that they may appear as side effects of build rules
+# otherwise ordered by order-only dependencies.
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../cmake/Modules/FindEigen3.cmake ../cmake/Modules/PatchOpenMPApple.cmake ../cmd/CMakeLists.txt ../cmd/discrete_field_to_bitmap/CMakeLists.txt ../cmd/generate_density_map/CMakeLists.txt ../cmd/generate_sdf/CMakeLists.txt ../cmd/resource_path.hpp.in ../discregrid/CMakeLists.txt /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCCompiler.cmake.in /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCCompilerABI.c /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCXXCompiler.cmake.in /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCompilerIdDetection.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineCCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineCompilerId.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineSystem.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeFindBinUtils.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeSystem.cmake.in /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeTestCCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeTestCXXCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeTestCompilerCommon.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/FindOpenMP.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Internal/FeatureTesting.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.1/CMakeCCompiler.cmake CMakeFiles/3.23.1/CMakeCXXCompiler.cmake CMakeFiles/3.23.1/CMakeSystem.cmake CMakeFiles/FindOpenMP/OpenMPCheckVersion.c CMakeFiles/FindOpenMP/OpenMPCheckVersion.cpp CMakeFiles/FindOpenMP/OpenMPTryFlag.c CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt ../cmake/Modules/FindEigen3.cmake ../cmake/Modules/PatchOpenMPApple.cmake ../cmd/CMakeLists.txt ../cmd/discrete_field_to_bitmap/CMakeLists.txt ../cmd/generate_density_map/CMakeLists.txt ../cmd/generate_sdf/CMakeLists.txt ../cmd/resource_path.hpp.in ../discregrid/CMakeLists.txt /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCCompiler.cmake.in /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCCompilerABI.c /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCXXCompiler.cmake.in /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCompilerIdDetection.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineCCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineCompilerId.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeDetermineSystem.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeFindBinUtils.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeSystem.cmake.in /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeTestCCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeTestCXXCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeTestCompilerCommon.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/FindOpenMP.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Internal/FeatureTesting.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.1/CMakeCCompiler.cmake CMakeFiles/3.23.1/CMakeCXXCompiler.cmake CMakeFiles/3.23.1/CMakeSystem.cmake CMakeFiles/FindOpenMP/OpenMPCheckVersion.c CMakeFiles/FindOpenMP/OpenMPCheckVersion.cpp CMakeFiles/FindOpenMP/OpenMPTryFlag.c CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

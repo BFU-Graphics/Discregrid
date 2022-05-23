@@ -1,0 +1,169 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "discregrid",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-discregrid-Debug-08dd255d6caed20ee2b2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "discregrid",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "cmd",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"jsonFile" : "directory-cmd-Debug-f8f24b457c0ba1491479.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "cmd"
+				},
+				{
+					"build" : "cmd/generate_sdf",
+					"jsonFile" : "directory-cmd.generate_sdf-Debug-fb5917488890542fb41c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "cmd/generate_sdf",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "cmd/discrete_field_to_bitmap",
+					"jsonFile" : "directory-cmd.discrete_field_to_bitmap-Debug-6409a9d18581066aa1a6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "cmd/discrete_field_to_bitmap",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "cmd/generate_density_map",
+					"jsonFile" : "directory-cmd.generate_density_map-Debug-d4afba27a5e8d68b823f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "cmd/generate_density_map",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"name" : "Discregrid",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Discregrid::@1ccdefab15027509105d",
+					"jsonFile" : "target-Discregrid-Debug-58b3ba15b70839accf14.json",
+					"name" : "Discregrid",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "DiscreteFieldToBitmap::@075c823e824f326a2074",
+					"jsonFile" : "target-DiscreteFieldToBitmap-Debug-e07adcfb0dcfe57d9f7e.json",
+					"name" : "DiscreteFieldToBitmap",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "GenerateDensityMap::@917d89d797db4de14aae",
+					"jsonFile" : "target-GenerateDensityMap-Debug-4e5f7f5e210e0dbc6cb5.json",
+					"name" : "GenerateDensityMap",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "GenerateSDF::@afd915ddd15167e47827",
+					"jsonFile" : "target-GenerateSDF-Debug-334acffbc5349ead199e.json",
+					"name" : "GenerateSDF",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/xayah/Desktop/Temp/Discregrid/cmake-build-debug",
+		"source" : "/Users/xayah/Desktop/Temp/Discregrid"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
