@@ -3,6 +3,11 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/Modules")
 
 project(Discregrid)
 
+if (APPLE)
+	find_package(OpenMP REQUIRED)
+	link_libraries(OpenMP::OpenMP_CXX)
+endif ()
+
 # Visual studio solution directories.
 set_property(GLOBAL PROPERTY USE_FOLDERS on)
 
